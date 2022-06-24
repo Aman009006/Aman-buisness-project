@@ -15,11 +15,11 @@ module.exports = {
   entry: "./src/js/main.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "docs"),
+    path: path.resolve(__dirname, "dist"),
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "docs"),
+      directory: path.join(__dirname, "dist"),
     },
     watchFiles: {
       paths: [
@@ -42,6 +42,7 @@ module.exports = {
       ],
       options: {
         usePolling: true,
+        pretty: true,
       },
     },
     port: 4000,
